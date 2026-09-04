@@ -1,4 +1,4 @@
-# CASE STORE
+# KAZE STORE
 
 A minimal, mobile-friendly online store for shoes, watches and accessories.
 
