@@ -1,0 +1,2 @@
+# kaze.storez
+kaze
