@@ -1,80 +1,35 @@
-# KAZE STORE
+# KAZE Store
 
-A minimal, mobile-friendly online store for shoes, watches, and
-accessories.
+A mobile-first static storefront for KAZE (Vettichira), focused on shoes with watches and accessories.
 
-## Features
+## Included
+- Responsive white/minimal design
+- Product category filters
+- Search
+- Shopping bag with localStorage
+- Delivery details form
+- Direct WhatsApp order submission
+- No COD
+- KAZE logo in `assets/kaze-logo.jpg`
 
--   Product grid with category filters
--   Product search
--   Shopping cart
--   Customer checkout form
--   One-click WhatsApp ordering with complete order details
--   Responsive mobile and desktop design
--   No database required for the basic WhatsApp ordering workflow
+## WhatsApp ordering
+Orders are sent to **9946375868** through WhatsApp.
 
-## Run Locally
+## Add your real products
+Open `script.js` and edit the `products` array near the top. Each product has:
+- `name`
+- `category`: `Shoes`, `Watches`, or `Others`
+- `price`
+- `tag`
+- `meta`
 
-Make sure Node.js is installed, then run:
+You can later add real product image paths and product-specific options.
 
-``` bash
-npm install
-npm run dev
-```
+## GitHub Pages
+1. Create a GitHub repository.
+2. Upload `index.html`, `style.css`, `script.js`, and the `assets` folder.
+3. In GitHub: **Settings → Pages**.
+4. Select the main branch and root folder.
+5. Save. GitHub will publish the site.
 
-Then open the local Vite URL shown in the terminal (for example,
-`http://localhost:5173`).
-
-## Change the WhatsApp Number
-
-Open `src/main.jsx` and find:
-
-``` js
-const WHATSAPP_NUMBER = "919876543210";
-```
-
-Replace it with your own full WhatsApp number, including the country
-code, without `+`, spaces, or dashes.
-
-Example:
-
-``` js
-const WHATSAPP_NUMBER = "919876543210";
-```
-
-## Add Your Own Products
-
-Edit the `products` array in `src/main.jsx`.
-
-You can change the product name, price, category, description, image,
-and product ID.
-
-For production, replace the demo Unsplash image URLs with your own
-product images.
-
-## Build for Production
-
-``` bash
-npm run build
-```
-
-The production files will be generated in the `dist/` folder.
-
-To preview the production build locally:
-
-``` bash
-npm run preview
-```
-
-## Deploy to Vercel
-
-1.  Push this project to GitHub.
-2.  Import the repository into Vercel.
-3.  Use the default Vite settings:
-    -   Build command: `npm run build`
-    -   Output directory: `dist`
-4.  Click **Deploy**.
-
-## License
-
-This project is for personal and commercial use.
+No build step or Node.js is required.

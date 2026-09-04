@@ -1,13 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CASE STORE - Shoes, watches and everyday essentials." />
-    <title>CASE STORE</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="KAZE — Shoes, Watches & More. Vettichira." />
+  <title>KAZE | Shoes, Watches & More</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="KAZE home">
+        <img src="assets/kaze-logo.jpg" alt="KAZE logo" />
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#shoes">Shoes</a>
+        <a href="#watches">Watches</a>
+        <a href="#other">Others</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          Bag <span id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="container">
+        <input id="searchInput" type="search" placeholder="Search shoes, watches, accessories..." autocomplete="off" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">KAZE STORE • VETTICHIRA</p>
+          <h1>Step into<br /><span>your style.</span></h1>
+          <p class="hero-copy">Premium-looking everyday picks, with shoes at the heart of KAZE.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#shop">Shop now</a>
+            <a class="text-link" href="https://wa.me/919946375868" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-shape">
+            <span>KAZE</span>
+            <small>SHOES • WATCHES • MORE</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Categories">
+      <div class="container category-grid">
+        <a href="#shoes"><span>01</span><strong>Shoes</strong><em>Explore collection →</em></a>
+        <a href="#watches"><span>02</span><strong>Watches</strong><em>Explore collection →</em></a>
+        <a href="#other"><span>03</span><strong>Accessories</strong><em>Explore collection →</em></a>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">KAZE COLLECTION</p>
+            <h2>Shop our picks</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Product categories">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="Shoes">Shoes</button>
+            <button class="filter" data-filter="Watches">Watches</button>
+            <button class="filter" data-filter="Others">Others</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="feature-banner" id="shoes">
+      <div class="container feature-grid">
+        <div>
+          <p class="eyebrow">SHOES FIRST</p>
+          <h2>Made for every<br />move.</h2>
+        </div>
+        <p>Browse everyday sneakers, casual pairs and statement styles. Product categories and prices can be edited easily in <code>script.js</code>.</p>
+      </div>
+    </section>
+
+    <section class="section compact" id="watches">
+      <div class="container split-info">
+        <div>
+          <p class="eyebrow">WATCHES</p>
+          <h2>Small detail.<br />Big difference.</h2>
+        </div>
+        <p>Clean, wearable watches to finish the look. Add your real watch products in the product list.</p>
+      </div>
+    </section>
+
+    <section class="section compact" id="other">
+      <div class="container split-info">
+        <div>
+          <p class="eyebrow">MORE FROM KAZE</p>
+          <h2>Complete<br />the fit.</h2>
+        </div>
+        <p>Add bags, wallets, sunglasses, belts or any other store categories here.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">ORDER DIRECT</p>
+          <h2>Ready to order?</h2>
+          <p>Choose your products, open the bag, enter your delivery address and submit. Your order details will open directly in WhatsApp.</p>
+        </div>
+        <a class="btn btn-dark" href="https://wa.me/919946375868" target="_blank" rel="noopener">WhatsApp KAZE</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/kaze-logo.jpg" alt="KAZE" />
+        <p>Shoes • Watches • More</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <a href="tel:+919946375868">9946375868</a>
+        <a href="mailto:kjisal16@gmail.com">kjisal16@gmail.com</a>
+        <span>Vettichira</span>
+      </div>
+      <div>
+        <strong>Social</strong>
+        <a href="https://instagram.com/kaze.storez" target="_blank" rel="noopener">@kaze.storez</a>
+        <a href="https://facebook.com/kazestorez" target="_blank" rel="noopener">Facebook / kazestorez</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> KAZE. All rights reserved.</span>
+      <span>COD unavailable</span>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-head">
+      <h2>Your bag</h2>
+      <button class="close-btn" id="closeCart" aria-label="Close bag">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="total-row"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+      <p class="microcopy">Delivery charge is confirmed by KAZE based on the delivery address.</p>
+      <button class="btn btn-dark full" id="checkoutBtn">Continue to order</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">KAZE ORDER</p>
+          <h2>Delivery details</h2>
+        </div>
+        <button class="close-btn" id="closeCheckout" aria-label="Close checkout">×</button>
+      </div>
+      <form id="checkoutForm">
+        <label>Name<input required name="name" placeholder="Your name" /></label>
+        <label>Phone<input required name="phone" inputmode="tel" placeholder="Your phone number" /></label>
+        <label>Delivery address<textarea required name="address" rows="4" placeholder="House name, place, pin code..."></textarea></label>
+        <label>Notes <span class="optional">(optional)</span><textarea name="notes" rows="2" placeholder="Size preference or other note"></textarea></label>
+        <p class="checkout-note">COD is not available. After you submit, WhatsApp will open with your order details.</p>
+        <button class="btn btn-dark full" type="submit">Submit order on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <button id="mobileCart">Bag <span id="mobileCartCount">0</span></button>
+    <a href="https://wa.me/919946375868" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
 </html>
