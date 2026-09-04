@@ -1,35 +1,33 @@
-# KAZE Store
+# KAZE Store — GitHub-ready
 
-A mobile-first static storefront for KAZE (Vettichira), focused on shoes with watches and accessories.
+A mobile-first, white/minimal KAZE storefront inspired by the supplied reference design.
 
-## Included
-- Responsive white/minimal design
-- Product category filters
-- Search
-- Shopping bag with localStorage
+## Features
+- Responsive desktop + mobile UI
+- Animated hero slider
+- Scroll reveal animations
+- Hover and click/ripple interactions
+- Product search and category filters
+- Shoe sizes + color selectors
+- Wishlist saved in localStorage
+- Shopping bag saved in localStorage
 - Delivery details form
 - Direct WhatsApp order submission
-- No COD
-- KAZE logo in `assets/kaze-logo.jpg`
+- COD disabled
+- Editable local placeholder product images
 
-## WhatsApp ordering
-Orders are sent to **9946375868** through WhatsApp.
-
-## Add your real products
-Open `script.js` and edit the `products` array near the top. Each product has:
-- `name`
-- `category`: `Shoes`, `Watches`, or `Others`
-- `price`
-- `tag`
-- `meta`
-
-You can later add real product image paths and product-specific options.
+## Edit products
+Open `script.js` and edit the `products` array. Replace the image paths with your own JPG/PNG files inside `assets/`.
 
 ## GitHub Pages
-1. Create a GitHub repository.
-2. Upload `index.html`, `style.css`, `script.js`, and the `assets` folder.
-3. In GitHub: **Settings → Pages**.
-4. Select the main branch and root folder.
-5. Save. GitHub will publish the site.
+Upload `index.html`, `style.css`, `script.js`, and `assets/` to a repository. Then:
+**Settings → Pages → Deploy from branch → main → / (root) → Save**
 
-No build step or Node.js is required.
+This is a static site, so there is no build step or Node.js requirement.
+
+## Store contact
+WhatsApp/Phone: 9946375868
+Email: kjisal16@gmail.com
+Location: Vettichira
+Instagram: @kaze.storez
+Facebook: kazestorez
